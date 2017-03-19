@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpServletResponse;
 
+
+
+
+
 public class SetAllCharacterEncodingFilter implements Filter {
 	private FilterConfig filteConfig;
 	public void destroy() {
