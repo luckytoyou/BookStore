@@ -30,12 +30,12 @@ public class SetAllCharacterEncodingFilter implements Filter {
 			throw new RuntimeException("non-http request");
 		}
 		
-		String encoding = "UTF-8";//Ä¬ÈÏµÄ
+		String encoding = "UTF-8";//é»˜è®¤çš„
 		String value = filteConfig.getInitParameter("encoding");
 		if(value!=null)
 			encoding = value;
 		
-		//ÉèÖÃÇëÇó£ºPOSTºÍGET·½Ê½±àÂë£¬ÏìÓ¦±àÂë
+		//è®¾ç½®è¯·æ±‚ï¼šPOSTå’ŒGETæ–¹å¼ç¼–ç ï¼Œå“åº”ç¼–ç 
 		request.setCharacterEncoding(encoding);
 		response.setCharacterEncoding(encoding);
 		response.setContentType("text/html;charset="+encoding);
@@ -70,5 +70,7 @@ class MyHttpServletRequest extends HttpServletRequestWrapper{
 		}
 		return value;
 	}
+	
+	
 	
 }
